@@ -14,14 +14,36 @@ navbar model =
     in
         ul [ class "dib ma0 navbar w-100 pa2 flex justify-between" ] <|
             navImg
-                ++ [ div [] navbarContent ]
+                ++ [ div [] <| navbarContent model ]
 
 
-navbarLink : ( String, String ) -> Html Msg
-navbarLink ( linkStr, name ) =
-    li [ class "list dib ma3 v-top" ] [ a [ class "link dim white b", href ("/#" ++ linkStr) ] [ text name ] ]
+navbarLink : ( String, String, Route, Model ) -> Html Msg
+navbarLink ( linkStr, name, route, model ) =
+    li [ class "list dib ma3 v-top" ]
+        [ a
+            [ classList
+                [ ( "link", True )
+                , ( "dim", True )
+                , ( "white", True )
+                , ( "b", True )
+                , ( "underline", isActivePage route model )
+                ]
+            , href ("/#" ++ linkStr)
+            ]
+            [ text name ]
+        ]
 
 
-navbarContent : List (Html Msg)
-navbarContent =
-    List.map navbarLink [ ( "home", "Home" ), ( "subjectselection", "subjectselection" ), ( "map", "map" ), ( "about", "about" ) ]
+navbarContent : Model -> List (Html Msg)
+navbarContent model =
+    List.map navbarLink
+        [ ( "home", "Home", HomeRoute, model )
+        , ( "subjectselection", "subjectselection", SubjectSelectionRoute, model )
+        , ( "map", "map", MapRoute, model )
+        , ( "about", "about", AboutRoute, model )
+        ]
+
+
+isActivePage : Route -> Model -> Bool
+isActivePage route model =
+    model.route == route
