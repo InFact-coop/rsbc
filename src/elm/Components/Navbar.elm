@@ -3,6 +3,7 @@ module Components.Navbar exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Types exposing (..)
+import State exposing (getRoute)
 
 
 navbar : Model -> Html Msg
@@ -17,8 +18,8 @@ navbar model =
                 ++ [ div [] <| navbarContent model ]
 
 
-navbarLink : ( String, String, Route, Model ) -> Html Msg
-navbarLink ( linkStr, name, route, model ) =
+navbarLink : ( String, String, Route ) -> Html Msg
+navbarLink ( linkStr, name, currentRoute ) =
     li [ class "list dib ma3 v-top" ]
         [ a
             [ classList
@@ -26,9 +27,9 @@ navbarLink ( linkStr, name, route, model ) =
                 , ( "dim", True )
                 , ( "white", True )
                 , ( "b", True )
-                , ( "underline", isActivePage route model )
+                , ( "underline", isActivePage currentRoute <| getRoute linkStr )
                 ]
-            , href ("/#" ++ linkStr)
+            , href ("/" ++ linkStr)
             ]
             [ text name ]
         ]
@@ -37,13 +38,13 @@ navbarLink ( linkStr, name, route, model ) =
 navbarContent : Model -> List (Html Msg)
 navbarContent model =
     List.map navbarLink
-        [ ( "home", "Home", HomeRoute, model )
-        , ( "subjectselection", "subjectselection", SubjectSelectionRoute, model )
-        , ( "map", "map", MapRoute, model )
-        , ( "about", "about", AboutRoute, model )
+        [ ( "#home", "Home", model.route )
+        , ( "#subjectselection", "subjectselection", model.route )
+        , ( "#map", "map", model.route )
+        , ( "#about", "about", model.route )
         ]
 
 
-isActivePage : Route -> Model -> Bool
-isActivePage route model =
-    model.route == route
+isActivePage : Route -> Route -> Bool
+isActivePage currentRoute linkRoute =
+    currentRoute == linkRoute
