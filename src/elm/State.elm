@@ -9,7 +9,8 @@ import Types exposing (..)
 initModel : Model
 initModel =
     { route = HomeRoute
-    , userInput = ""
+    , subject = Nothing
+    , resource = ""
     }
 
 
@@ -23,21 +24,27 @@ getRoute hash =
         "#home" ->
             HomeRoute
 
-        "#pageone" ->
-            PageOneRoute
+        "#subjectselection" ->
+            SubjectSelectionRoute
 
-        "#pagetwo" ->
-            PageTwoRoute
+        "#subject" ->
+            SubjectRoute
+
+        "#resource" ->
+            ResourceRoute
+
+        "#map" ->
+            MapRoute
+
+        "#about" ->
+            AboutRoute
 
         _ ->
-            HomeRoute
+            NotFoundRoute
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        Change newInput ->
-            ( { model | userInput = newInput }, Cmd.none )
-
         UrlChange location ->
             ( { model | route = (getRoute location.hash) }, Cmd.none )

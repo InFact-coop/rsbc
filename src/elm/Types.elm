@@ -8,14 +8,29 @@ import Navigation
 
 type Route
     = HomeRoute
-    | PageOneRoute
-    | PageTwoRoute
+    | SubjectSelectionRoute
+    | SubjectRoute
+    | ResourceRoute
+    | MapRoute
+    | AboutRoute
+    | NotFoundRoute
 
 
 type alias Model =
     { route : Route
-    , userInput : String
+    , subject : Maybe Subject
+    , resource : String
     }
+
+
+type Subject
+    = Maths
+    | Science
+    | Arts
+    | Reading
+    | Technology
+    | Sport
+    | Homework
 
 
 
@@ -23,5 +38,4 @@ type alias Model =
 
 
 type Msg
-    = Change String
-    | UrlChange Navigation.Location
+    = UrlChange Navigation.Location

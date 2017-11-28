@@ -7,9 +7,14 @@ import Html exposing (..)
 
 import Types exposing (..)
 import Routes.Home exposing (..)
-import Routes.PageOne exposing (..)
-import Routes.PageTwo exposing (..)
-import Routes.Navbar exposing (..)
+import Routes.SubjectSelectionPage exposing (..)
+import Routes.SubjectPage exposing (..)
+import Routes.MapPage exposing (..)
+import Routes.ResourcePage exposing (..)
+import Routes.MapPage exposing (..)
+import Routes.AboutPage exposing (..)
+import Routes.NotFoundPage exposing (..)
+import Components.Navbar exposing (..)
 
 
 view : Model -> Html Msg
@@ -20,11 +25,23 @@ view model =
                 HomeRoute ->
                     home model
 
-                PageOneRoute ->
-                    pageOne model
+                SubjectSelectionRoute ->
+                    subjectSelectionPage model
 
-                PageTwoRoute ->
-                    pageTwo model
+                SubjectRoute ->
+                    subjectPage model
+
+                ResourceRoute ->
+                    resourcePage model
+
+                MapRoute ->
+                    mapPage model
+
+                AboutRoute ->
+                    aboutPage model
+
+                NotFoundRoute ->
+                    notFoundPage model
     in
         div []
             [ navbar model
