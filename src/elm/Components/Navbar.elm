@@ -27,7 +27,7 @@ navbarLink ( linkStr, name, currentRoute ) =
                 , ( "dim", True )
                 , ( "white", True )
                 , ( "b", True )
-                , ( "underline", isActivePage currentRoute <| getRoute linkStr )
+                , ( "underline", isActivePage currentRoute <| Tuple.first <| getRoute linkStr )
                 ]
             , href ("/" ++ linkStr)
             ]
@@ -39,9 +39,9 @@ navbarContent : Model -> List (Html Msg)
 navbarContent model =
     List.map navbarLink
         [ ( "#home", "Home", model.route )
-        , ( "#subjectselection", "subjectselection", model.route )
-        , ( "#map", "map", model.route )
-        , ( "#about", "about", model.route )
+        , ( "#subjectselection", "Subject selection", model.route )
+        , ( "#map", "Map", model.route )
+        , ( "#about", "About", model.route )
         ]
 
 

@@ -39,3 +39,4 @@ type Subject
 
 type Msg
     = UrlChange Navigation.Location
+    | InitMap
