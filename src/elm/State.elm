@@ -1,13 +1,11 @@
 port module State exposing (..)
 
-import Types exposing (..)
-
-
 -- imports for delay func
 
 import Process
-import Time
 import Task exposing (Task)
+import Time
+import Types exposing (..)
 
 
 -- MODEL
@@ -28,6 +26,9 @@ initModel =
 getRoute : String -> ( Route, Cmd Msg )
 getRoute hash =
     case hash of
+        "" ->
+            ( HomeRoute, Cmd.none )
+
         "#home" ->
             ( HomeRoute, Cmd.none )
 
@@ -36,6 +37,16 @@ getRoute hash =
 
         "#subject" ->
             ( SubjectRoute, Cmd.none )
+
+        "#envselection" ->
+            ( EnvSelectionRoute
+            , Cmd.none
+            )
+
+        "#env" ->
+            ( EnvRoute
+            , Cmd.none
+            )
 
         "#resource" ->
             ( ResourceRoute, Cmd.none )
@@ -58,7 +69,7 @@ update msg model =
                 ( newRoute, newCmd ) =
                     getRoute location.hash
             in
-                ( { model | route = newRoute }, newCmd )
+            ( { model | route = newRoute }, newCmd )
 
         InitMap ->
             ( model, initMap () )

@@ -10,6 +10,8 @@ type Route
     = HomeRoute
     | SubjectSelectionRoute
     | SubjectRoute
+    | EnvSelectionRoute
+    | EnvRoute
     | ResourceRoute
     | MapRoute
     | AboutRoute
@@ -31,6 +33,14 @@ type Subject
     | Technology
     | Sport
     | Homework
+
+
+type alias Resource =
+    { name : String
+    , rtype : String
+    , votes : String
+    , subject : String
+    }
 
 
 
