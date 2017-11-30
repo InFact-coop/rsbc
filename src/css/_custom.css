@@ -48,3 +48,8 @@ button {
 .wide-spacing {
   letter-spacing: var(--letter-spacing-2);
 }
+
+.mapListItem {
+  background-color: #E5E5E5;
+
+}

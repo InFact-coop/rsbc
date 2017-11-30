@@ -8,24 +8,24 @@ import Types exposing (..)
 mapPage : Model -> Html Msg
 mapPage model =
     div [ class "w-80-ns center" ]
-        [ div [ class "bg-blue pa3 ba" ]
-            [ div [ id "map", class "dib w-60-ns mr5" ]
+        [ div [ class "bg-white pa3 ba mt2" ]
+            [ div [ id "map", class "dib w-60-ns" ]
                 []
-            , ul [ class "bg-green w-30-ns dib v-top ma0" ] mapListContent
+            , div [ class "center dib w-40 v-top" ] [ ul [ class "list" ] mapListContent ]
             ]
         ]
 
 
 mapListItem : ( String, String ) -> Html Msg
 mapListItem ( title, description ) =
-    li [ class "bg-pink" ]
-        [ h2 [] [ text title ], p [] [ text description ] ]
+    li [ class "mapListItem pa3 ma2" ]
+        [ h2 [ class "f4" ] [ text title ], p [] [ text description ] ]
 
 
 mapListContent : List (Html Msg)
 mapListContent =
     List.map mapListItem
-        [ ( "Title1", "description1" )
-        , ( "Title2", "description2" )
-        , ( "Title3", "description3" )
+        [ ( "Place1", "description1" )
+        , ( "Place2", "description2" )
+        , ( "Place3", "description3" )
         ]
