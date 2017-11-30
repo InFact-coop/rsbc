@@ -35,6 +35,14 @@ type Subject
     | Homework
 
 
+type alias Resource =
+    { name : String
+    , rtype : String
+    , votes : String
+    , subject : String
+    }
+
+
 
 -- Update
 
