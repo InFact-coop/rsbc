@@ -1,5 +1,10 @@
-module State exposing (..)
+port module State exposing (..)
 
+-- imports for delay func
+
+import Process
+import Task exposing (Task)
+import Time
 import Types exposing (..)
 
 
@@ -18,42 +23,63 @@ initModel =
 --UPDATE
 
 
-getRoute : String -> Route
+getRoute : String -> ( Route, Cmd Msg )
 getRoute hash =
     case hash of
         "" ->
-            HomeRoute
+            ( HomeRoute, Cmd.none )
 
         "#home" ->
-            HomeRoute
+            ( HomeRoute, Cmd.none )
 
         "#subjectselection" ->
-            SubjectSelectionRoute
+            ( SubjectSelectionRoute, Cmd.none )
 
         "#subject" ->
-            SubjectRoute
+            ( SubjectRoute, Cmd.none )
 
         "#envselection" ->
-            EnvSelectionRoute
+            ( EnvSelectionRoute
+            , Cmd.none
+            )
 
         "#env" ->
-            EnvRoute
+            ( EnvRoute
+            , Cmd.none
+            )
 
         "#resource" ->
-            ResourceRoute
+            ( ResourceRoute, Cmd.none )
 
         "#map" ->
-            MapRoute
+            ( MapRoute, delay 200 InitMap )
 
         "#about" ->
-            AboutRoute
+            ( AboutRoute, Cmd.none )
 
         _ ->
-            NotFoundRoute
+            ( NotFoundRoute, Cmd.none )
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         UrlChange location ->
-            ( { model | route = getRoute location.hash }, Cmd.none )
+            let
+                ( newRoute, newCmd ) =
+                    getRoute location.hash
+            in
+            ( { model | route = newRoute }, newCmd )
+
+        InitMap ->
+            ( model, initMap () )
+
+
+port initMap : () -> Cmd msg
+
+
+delay : Float -> Msg -> Cmd Msg
+delay ms msg =
+    Process.sleep (Time.millisecond * ms)
+        |> Task.andThen (always (Task.succeed msg))
+        |> Task.perform identity

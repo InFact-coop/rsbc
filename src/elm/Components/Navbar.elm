@@ -2,8 +2,8 @@ module Components.Navbar exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import Types exposing (..)
 import State exposing (getRoute)
+import Types exposing (..)
 
 
 navbar : Model -> Html Msg
@@ -43,4 +43,4 @@ navbarContent model =
 
 isActivePage : Model -> String -> Bool
 isActivePage model linkStr =
-    model.route == getRoute linkStr
+    model.route == Tuple.first (getRoute linkStr)

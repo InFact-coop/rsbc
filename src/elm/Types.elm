@@ -49,3 +49,4 @@ type alias Resource =
 
 type Msg
     = UrlChange Navigation.Location
+    | InitMap
