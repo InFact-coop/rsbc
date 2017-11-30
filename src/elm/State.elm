@@ -30,6 +30,12 @@ getRoute hash =
         "#subject" ->
             SubjectRoute
 
+        "#envselection" ->
+            EnvSelectionRoute
+
+        "#env" ->
+            EnvRoute
+
         "#resource" ->
             ResourceRoute
 

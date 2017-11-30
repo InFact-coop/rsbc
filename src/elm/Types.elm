@@ -10,6 +10,8 @@ type Route
     = HomeRoute
     | SubjectSelectionRoute
     | SubjectRoute
+    | EnvSelectionRoute
+    | EnvRoute
     | ResourceRoute
     | MapRoute
     | AboutRoute
