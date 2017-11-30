@@ -7,8 +7,6 @@ function initMap() {
       lng: -0.103096
     }
   });
-  console.log("var map =",map)
-
   // Create an array of alphabetical characters used to label the markers.
   var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 

@@ -57,17 +57,11 @@ update msg model =
             let
                 ( newRoute, newCmd ) =
                     getRoute location.hash
-
-                x =
-                    Debug.log "newRoute" newRoute
-
-                y =
-                    Debug.log "newCmd" newCmd
             in
                 ( { model | route = newRoute }, newCmd )
 
         InitMap ->
-            ( model, Debug.log "delay call" initMap () )
+            ( model, initMap () )
 
 
 port initMap : () -> Cmd msg
