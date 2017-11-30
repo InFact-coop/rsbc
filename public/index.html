@@ -27,16 +27,20 @@
 </head>
 
 <body>
-  <div id="map"></div>
+
   <script>
   Elm.Main.fullscreen()
 
   </script>
+    <div id="map"></div>
   <script type="text/javascript" src="map.js"></script>
+
   <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
    </script>
-   <script async defer
-       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTOIvF9NwylPKtY0zkV8HC2ijqW-86AJ0&callback=initMap">
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTOIvF9NwylPKtY0zkV8HC2ijqW-86AJ0">
+       </script>
+       <script type="text/javascript">
+         initMap()
        </script>
 
 </body>
