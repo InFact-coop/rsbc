@@ -21,6 +21,9 @@ initModel =
 getRoute : String -> Route
 getRoute hash =
     case hash of
+        "" ->
+            HomeRoute
+
         "#home" ->
             HomeRoute
 
@@ -53,4 +56,4 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         UrlChange location ->
-            ( { model | route = (getRoute location.hash) }, Cmd.none )
+            ( { model | route = getRoute location.hash }, Cmd.none )
