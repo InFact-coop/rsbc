@@ -27,7 +27,7 @@ navbarLink ( linkStr, name, currentRoute ) =
                 , ( "dim", True )
                 , ( "white", True )
                 , ( "b", True )
-                , ( "underline", isActivePage currentRoute <| getRoute linkStr )
+                , ( "underline", isActivePage currentRoute <| Tuple.first <| getRoute linkStr )
                 ]
             , href ("/" ++ linkStr)
             ]

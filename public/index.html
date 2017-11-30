@@ -5,42 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <script type="text/javascript" src="elm.js"></script>
   <link rel="stylesheet" href="style.min.css" />
+  <script type="text/javascript" src="elm.js"></script>
+  
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <!-- <link rel='shortcut icon' type='image/x-icon' href='/assets/favicon.ico' /> -->
-  <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+
 </head>
 
 <body>
 
-  <script>
-  Elm.Main.fullscreen()
-
-  </script>
-    <div id="map"></div>
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"> </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTOIvF9NwylPKtY0zkV8HC2ijqW-86AJ0"></script>
   <script type="text/javascript" src="map.js"></script>
+  <script>
+  var app = Elm.Main.fullscreen()
+  app.ports.initMap.subscribe(function(){
+    console.log("initMap in js")
+    // setInterval(initMap, 200)
+    initMap() 
+  })
+  </script>
+    <!-- <div id="map"></div> -->
 
-  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-   </script>
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTOIvF9NwylPKtY0zkV8HC2ijqW-86AJ0">
-       </script>
        <script type="text/javascript">
-         initMap()
+        //  console.log ("hi", initMap())
        </script>
 
 </body>

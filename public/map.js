@@ -1,5 +1,5 @@
 function initMap() {
-console.log('hello');
+  console.log("inside initMap in js")
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 13,
     center: {
@@ -7,7 +7,7 @@ console.log('hello');
       lng: -0.103096
     }
   });
-
+  console.log("var map =",map)
 
   // Create an array of alphabetical characters used to label the markers.
   var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -17,11 +17,13 @@ console.log('hello');
   // create an array of markers based on a given "locations" array.
   // The map() method here has nothing to do with the Google Maps API.
   var markers = locations.map(function(location, i) {
+      
     return new google.maps.Marker({
       position: location,
       label: labels[i % labels.length]
     });
   });
+  console.log('markers', markers);
 
   // Add a marker clusterer to manage the markers.
   var markerCluster = new MarkerClusterer(map, markers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
