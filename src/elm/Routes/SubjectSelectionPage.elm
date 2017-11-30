@@ -11,7 +11,7 @@ subjectSelectionPage model =
     div [ class "w-60-ns center" ]
         [ h1 [ class "tc f1" ]
             [ text "Subjects" ]
-        , buttonMaker "ba b--rsbc-red grow black wide-spacing pa2 ma1 dib" "Maths" "" "subject"
+        , buttonMaker "mathImage ba b--rsbc-red grow black wide-spacing pa2 ma1 dib" "Maths" "" "subject"
         , buttonMaker "ba b--rsbc-red grow black wide-spacing pa2 ma1 dib" "Maths" "" "subject"
         , buttonMaker "ba b--rsbc-red grow black wide-spacing pa2 ma1 dib" "Maths" "" "subject"
         , buttonMaker "ba b--rsbc-red grow black wide-spacing pa2 ma1 dib" "Maths" "" "subject"
