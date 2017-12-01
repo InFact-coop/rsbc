@@ -18,14 +18,14 @@ aboutPage model =
                     formContent
     in
     div [ class "pt5" ]
-        [ div [ class "" ]
+        [ div [ class "w-75 center" ]
             --[ div [ class "w-100 h-100 bg-pink ma5 dib" ]
             [ div [ class "center pl4 mw8" ]
                 [ button [ class tabStyle, classList [ ( "bg-rsbc-red", not <| onView AboutRsbc model ) ], onClick <| UpdateAbout AboutRsbc ] [ text "About RSBC" ]
                 , button [ class tabStyle, classList [ ( "bg-rsbc-red", not <| onView AboutYou model ) ], onClick <| UpdateAbout AboutYou ]
                     [ text "About You" ]
                 ]
-            , Html.section [ class "ba br3 b--rsbc-red w-100 mw8 h-ta pa4 pt2 center hide-bottom" ]
+            , Html.section [ class "ba br3 b--rsbc-red w-100 mw8 h-ta pa4 pt2 bg-white center hide-bottom" ]
                 [ liveContent
                 ]
             ]
