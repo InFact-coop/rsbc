@@ -54,8 +54,8 @@ button {
 
 }
 
-.mathImage {
+.scienceIcon {
   background: url('./assets/calculator.png') no-repeat;
-  background-size: 50%;
-  background-position: center;
+  width: 20rem;
+
 }
