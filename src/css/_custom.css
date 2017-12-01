@@ -56,3 +56,12 @@ button {
 .hide-bottom {
   margin-top: -2px;
 }
+
+.vh-33 {
+  height: 33vh;
+}
+
+.background-image {
+  background-image: url(/assets/uk.png);
+  background-size: cover;
+}

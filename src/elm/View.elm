@@ -4,6 +4,7 @@ module View exposing (..)
 
 import Components.Navbar exposing (..)
 import Html exposing (..)
+import Html.Attributes exposing (..)
 import Routes.AboutPage exposing (..)
 import Routes.EnvPage exposing (..)
 import Routes.EnvSelectionPage exposing (..)

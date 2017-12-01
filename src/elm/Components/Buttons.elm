@@ -9,11 +9,9 @@ import Types exposing (..)
 buttonMaker : String -> String -> String -> String -> Html Msg
 buttonMaker buttonClass heading body linkStr =
     a
-        [ class "no-underline"
+        [ class buttonClass
         , href ("/#" ++ linkStr)
         ]
-        [ div [ class ("" ++ buttonClass) ]
-            [ h1 [] [ text heading ]
-            , p [] [ text body ]
-            ]
+        [ h1 [ class "f4 bb b--rsbc-red pa2  dib" ] [ text heading ]
+        , p [] [ text body ]
         ]
