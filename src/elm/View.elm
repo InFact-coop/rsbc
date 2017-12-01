@@ -4,6 +4,7 @@ module View exposing (..)
 
 import Components.Navbar exposing (..)
 import Html exposing (..)
+import Html.Attributes exposing (..)
 import Routes.AboutPage exposing (..)
 import Routes.EnvPage exposing (..)
 import Routes.EnvSelectionPage exposing (..)
@@ -48,7 +49,7 @@ view model =
                 NotFoundRoute ->
                     notFoundPage model
     in
-        div []
-            [ navbar model
-            , page
-            ]
+    div [ class "background-image min-vh-100 w-100" ]
+        [ navbar model
+        , page
+        ]
