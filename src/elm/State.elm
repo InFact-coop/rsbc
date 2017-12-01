@@ -16,6 +16,7 @@ initModel =
     { route = HomeRoute
     , subject = Nothing
     , resource = ""
+    , liveAbout = AboutRsbc
     }
 
 
@@ -69,10 +70,13 @@ update msg model =
                 ( newRoute, newCmd ) =
                     getRoute location.hash
             in
-            ( { model | route = newRoute }, newCmd )
+                ( { model | route = newRoute }, newCmd )
 
         InitMap ->
             ( model, initMap () )
+
+        UpdateAbout currentPage ->
+            ( { model | liveAbout = currentPage }, Cmd.none )
 
 
 port initMap : () -> Cmd msg

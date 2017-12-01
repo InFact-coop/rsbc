@@ -45,6 +45,10 @@ button {
   color: var(--rsbc-red);
 }
 
+.bg-rsbc-red {
+  background-color: var(--rsbc-red);
+}
+
 .wide-spacing {
   letter-spacing: var(--letter-spacing-2);
 }
@@ -57,5 +61,9 @@ button {
 .scienceIcon {
   background: url('./assets/calculator.png') no-repeat;
   width: 20rem;
+}
+
+.hide-bottom {
+  margin-top: -2px;
 
 }
