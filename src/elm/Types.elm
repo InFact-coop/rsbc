@@ -22,6 +22,7 @@ type alias Model =
     { route : Route
     , subject : Maybe Subject
     , resource : String
+    , liveAbout : AboutPage
     }
 
 
@@ -33,6 +34,11 @@ type Subject
     | Technology
     | Sport
     | Homework
+
+
+type AboutPage
+    = AboutRsbc
+    | AboutYou
 
 
 type alias Resource =
@@ -50,3 +56,4 @@ type alias Resource =
 type Msg
     = UrlChange Navigation.Location
     | InitMap
+    | UpdateAbout AboutPage
