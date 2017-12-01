@@ -49,7 +49,7 @@ view model =
                 NotFoundRoute ->
                     notFoundPage model
     in
-        div []
-            [ navbar model
-            , page
-            ]
+    div [ class "background-image min-vh-100 w-100" ]
+        [ navbar model
+        , page
+        ]
