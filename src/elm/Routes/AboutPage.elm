@@ -12,22 +12,35 @@ aboutPage model =
         liveContent =
             case model.liveAbout of
                 AboutRsbc ->
-                    [ aboutContent ]
+                    aboutContent
 
                 AboutYou ->
                     formContent
     in
-        div [ class "w-60-ns center" ]
-            [ div [ class "w-100 h-100 bg-pink ma5 dib" ]
-                [ div []
-                    [ button [ onClick <| UpdateAbout AboutRsbc ] [ text "About RSBC" ]
-                    , button [ onClick <| UpdateAbout AboutYou ]
-                        [ text "About You" ]
-                    , Html.section []
-                        liveContent
-                    ]
+    div [ class "pt5" ]
+        [ div [ class "" ]
+            --[ div [ class "w-100 h-100 bg-pink ma5 dib" ]
+            [ div [ class "center pl4 mw8" ]
+                [ button [ class tabStyle, classList [ ( "bg-rsbc-red", not <| onView AboutRsbc model ) ], onClick <| UpdateAbout AboutRsbc ] [ text "About RSBC" ]
+                , button [ class tabStyle, classList [ ( "bg-rsbc-red", not <| onView AboutYou model ) ], onClick <| UpdateAbout AboutYou ]
+                    [ text "About You" ]
+                ]
+            , Html.section [ class "ba br3 b--rsbc-red w-100 mw8 h-ta pa4 pt2 center hide-bottom" ]
+                [ liveContent
                 ]
             ]
+
+        --]
+        ]
+
+
+tabStyle =
+    "f4 pointer link dim br4 br--top ph3 pv2 pb0 mb0 dib b--rsbc-red bb-0 bg-white"
+
+
+onView : AboutPage -> Model -> Bool
+onView view model =
+    view == model.liveAbout
 
 
 aboutContent : Html Msg
@@ -45,13 +58,46 @@ aboutContent =
 formItem : String -> Html Msg
 formItem field =
     div []
-        [ label [ class "db fw4 lh-copy f6 " ] [ text field ]
+        [ label [ class "dib fw4 w5 tr lh-copy f6 pr2" ] [ text field ]
         , input
-            [ class "br2 pa2 mb2 input-reset ba  bg-transparent w-80 measure" ]
+            [ class (inputBaseClass ++ " w-80 measure ") ]
             []
         ]
 
 
-formContent : List (Html Msg)
+formNumberItem : String -> Html Msg
+formNumberItem field =
+    div [ class "dib" ]
+        [ label [ class "dib fw4 w3 tr lh-copy f6 ma3" ] [ text field ]
+        , input
+            [ class (inputBaseClass ++ " w3") ]
+            []
+        ]
+
+
+labelClass =
+    "dib fw4 w5 tr lh-copy f6 pr2"
+
+
+inputBaseClass =
+    "pa1 mb2 input-reset ba bt-0 br-0 bl-0 f4 bg-white b--rsbc-red"
+
+
+formContent : Html Msg
 formContent =
-    List.map formItem [ "Local Authority", "School Name", "First Name", "Last Name", "Email Address" ]
+    div []
+        ([ div [ class "w100 ma2 ml4 b pv1" ] [ text "Your School" ] ]
+            ++ List.map
+                formItem
+                [ "Local Authority", "School Name" ]
+            ++ [ div [ class "v-mid pv2" ]
+                    [ div [ class labelClass ] [ text "Number of current VI students in:" ]
+                    , div [ class "dib w-75" ] (List.map formNumberItem [ "KS1", "KS2", "KS3", "GCSE", "A-Level" ])
+                    ]
+               ]
+            ++ [ div [ class "w100 ma2 ml4 b pv1" ] [ text "Your contact details" ] ]
+            ++ List.map
+                formItem
+                [ "First Name", "Last Name", "Email Address" ]
+            ++ [ div [ class "pa3 tl" ] [ div [ class "f5 pointer link bg-animate hover-bg-light-gray br2 ph3 pv2 ma3 ml5 dib ba b--rsbc-red" ] [ text "Submit" ] ] ]
+        )

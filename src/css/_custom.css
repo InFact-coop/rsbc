@@ -45,6 +45,14 @@ button {
   color: var(--rsbc-red);
 }
 
+.bg-rsbc-red {
+  background-color: var(--rsbc-red);
+}
+
 .wide-spacing {
   letter-spacing: var(--letter-spacing-2);
+}
+
+.hide-bottom {
+  margin-top: -2px;
 }
