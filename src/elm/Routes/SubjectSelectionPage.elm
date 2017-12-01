@@ -8,24 +8,22 @@ import Types exposing (..)
 
 subjectSelectionPage : Model -> Html Msg
 subjectSelectionPage model =
-    div [ class "center w-60-ns tc cardFormat" ]
-        [ h1 [ class "black tc f1" ]
-            [ text "Subjects" ]
-        , div [ class "inline-flex flex-wrap justify-around" ]
-            [ imgButton "grow black wide-spacing dib"
+    div [ class "tc pt4 w-75 center" ]
+        [ div
+            [ class "pt4 inline-flex flex-wrap justify-between" ]
+            [ imgButton "ba b--black grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2"
                 "Maths"
                 ""
                 "subject"
                 "./assets/calculator.png"
-            , imgButton "grow black wide-spacing dib"
+            , imgButton "ba b--black grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2"
                 "Science"
                 ""
                 "subject"
                 "./assets/scienceIcon.png"
-            , imgButton "  grow black wide-spacing dib" "Arts" "" "subject" "./assets/paintIcon.png"
-            , imgButton "  grow black wide-spacing dib" "Reading" "" "subject" "./assets/readingIcon.png"
-            , imgButton " grow black wide-spacing dib" "Sport" "" "subject" "./assets/sportsIcon.png"
-            , imgButton "  grow black wide-spacing dib" "Homework" "" "subject" "./assets/homeworkIcon.png"
-            , imgButton " grow black wide-spacing dib" "All" "" "subject" "./assets/everythingIcon.png"
+            , imgButton "ba b--black grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2" "Arts" "" "subject" "./assets/paintIcon.png"
+            , imgButton "  ba b--black grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2" "Reading" "" "subject" "./assets/readingIcon.png"
+            , imgButton " ba b--black grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2" "Sport" "" "subject" "./assets/sportsIcon.png"
+            , imgButton "  ba b--black grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2" "Homework" "" "subject" "./assets/homeworkIcon.png"
             ]
         ]
