@@ -30,7 +30,6 @@ button {
 .navbar {
   height: 6rem;
   background: white;
-
 }
 
 #map {
@@ -54,8 +53,7 @@ button {
 }
 
 .mapListItem {
-  background-color: #E5E5E5;
-
+  background-color: #e5e5e5;
 }
 
 .scienceIcon {
@@ -65,12 +63,19 @@ button {
 
 .hide-bottom {
   margin-top: -2px;
-
 }
 
 .cardFormat {
   background: white;
-  box-shadow: 5px 5px 10px 0px rgba(51, 51, 51, 0.10);
+  box-shadow: 5px 5px 10px 0px rgba(51, 51, 51, 0.1);
   border-radius: 6px;
+}
 
+.vh-33 {
+  height: 33vh;
+}
+
+.background-image {
+  background-image: url(/assets/uk.png);
+  background-size: cover;
 }
