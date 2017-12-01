@@ -25,7 +25,7 @@ imgButton buttonClass heading body linkStr imgSrc =
         [ class "no-underline w-25 dib pa1"
         , href ("/#" ++ linkStr)
         ]
-        [ div [ class ("tc justify-center no-repeat flex items-end ma3 bg-center contain" ++ buttonClass), style [ ( "background-image", "url(" ++ imgSrc ++ ")" ), ( "height", "10rem" ) ] ] []
+        [ div [ class ("ba b--black grow tc justify-center no-repeat flex items-end ma3 bg-center contain" ++ buttonClass), style [ ( "background-image", "url(" ++ imgSrc ++ ")" ), ( "height", "10rem" ) ] ] []
         , div []
             [ h1 [ class "tc" ] [ text heading ]
             , p [] [ text body ]

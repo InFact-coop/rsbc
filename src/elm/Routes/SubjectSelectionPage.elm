@@ -8,11 +8,9 @@ import Types exposing (..)
 
 subjectSelectionPage : Model -> Html Msg
 subjectSelectionPage model =
-    div [ class "center w-60-ns tc cardFormat" ]
-        [ h1 [ class "black tc f1" ]
-            [ text "Subjects" ]
-        , div [ class "inline-flex flex-wrap justify-around" ]
-            [ imgButton "grow black wide-spacing dib"
+    div [ class "pt3 center w-60-ns tc cardFormat" ]
+        [ div [ class "inline-flex flex-wrap justify-around" ]
+            [ imgButton "ba black grow black wide-spacing dib"
                 "Maths"
                 ""
                 "subject"
@@ -22,7 +20,7 @@ subjectSelectionPage model =
                 ""
                 "subject"
                 "./assets/scienceIcon.png"
-            , imgButton "  grow black wide-spacing dib" "Arts" "" "subject" "./assets/paintIcon.png"
+            , imgButton "grow black wide-spacing dib" "Arts" "" "subject" "./assets/paintIcon.png"
             , imgButton "  grow black wide-spacing dib" "Reading" "" "subject" "./assets/readingIcon.png"
             , imgButton " grow black wide-spacing dib" "Sport" "" "subject" "./assets/sportsIcon.png"
             , imgButton "  grow black wide-spacing dib" "Homework" "" "subject" "./assets/homeworkIcon.png"
