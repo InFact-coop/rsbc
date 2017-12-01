@@ -13,16 +13,16 @@ navbar model =
             [ img [ src "./assets/rsbc_logo.png", class "h3" ] []
             ]
     in
-    ul [ class "dib ma0 navbar w-100 pa2 flex justify-between" ] <|
-        navImg
-            ++ [ div [] <| navbarContent model ]
+        ul [ class "black dib ma0 navbar w-100 pa2 flex justify-between" ] <|
+            navImg
+                ++ [ div [] <| navbarContent model ]
 
 
 navbarLink : ( String, String, Bool ) -> Html Msg
 navbarLink ( linkStr, name, onPage ) =
     li [ class "list dib ma3 v-top" ]
         [ a
-            [ class "b--rsbc-red no-underline dim white wide-spacing pb2"
+            [ class "b--rsbc-red no-underline dim black wide-spacing pb2"
             , classList [ ( "bb", onPage ) ]
             , href ("/" ++ linkStr)
             ]
