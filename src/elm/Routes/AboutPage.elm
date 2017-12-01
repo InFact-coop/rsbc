@@ -21,11 +21,11 @@ aboutPage model =
         [ div [ class "w-75 center" ]
             --[ div [ class "w-100 h-100 bg-pink ma5 dib" ]
             [ div [ class "center pl4 mw8" ]
-                [ button [ class tabStyle, classList [ ( "bg-rsbc-red", not <| onView AboutRsbc model ) ], onClick <| UpdateAbout AboutRsbc ] [ text "About RSBC" ]
-                , button [ class tabStyle, classList [ ( "bg-rsbc-red", not <| onView AboutYou model ) ], onClick <| UpdateAbout AboutYou ]
+                [ button [ class tabStyle, classList [ ( "bb-0", onView AboutRsbc model ) ], onClick <| UpdateAbout AboutRsbc ] [ text "About RSBC" ]
+                , button [ class tabStyle, classList [ ( "bb-0", onView AboutYou model ) ], onClick <| UpdateAbout AboutYou ]
                     [ text "About You" ]
                 ]
-            , Html.section [ class "ba br3 b--rsbc-red w-100 mw8 h-ta pa4 pt2 bg-white center hide-bottom" ]
+            , Html.section [ class "ba b--black w-100 mw8 h-ta pa4 pt2 bg-white center hide-bottom" ]
                 [ liveContent
                 ]
             ]
@@ -35,7 +35,7 @@ aboutPage model =
 
 
 tabStyle =
-    "f4 pointer link dim br4 br--top ph3 pv2 pb0 mb0 dib b--rsbc-red bb-0 bg-white"
+    "f4 pointer link dim  br--top ph3 pv2 pb0 mb0 dib b--black bg-white"
 
 
 onView : AboutPage -> Model -> Bool
@@ -51,7 +51,7 @@ aboutContent =
         , h2 [] [ text "This site" ]
         , p [] [ text "With this site, we hope to...." ]
         , h2 [] [ text "Your help" ]
-        , p [] [ text "If you switch to the about you tab and fill out the information, it will help us a lot in reaching our goal of helping as many visulally impaired young people as possible" ]
+        , p [] [ text "If you switch to the \"About You\" tab and fill out the information, it will help us a lot in reaching our goal of helping as many visulally impaired young people as possible" ]
         ]
 
 
