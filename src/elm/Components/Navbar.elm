@@ -10,7 +10,7 @@ navbar : Model -> Html Msg
 navbar model =
     let
         navImg =
-            [ img [ src "./assets/rsbc_logo.png", class "h3" ] []
+            [ a [ href "/#" ] [ img [ src "./assets/rsbc_logo.png", class "h3" ] [] ]
             ]
     in
     ul [ class "black dib ma0 navbar w-100 pa2 flex justify-between" ] <|

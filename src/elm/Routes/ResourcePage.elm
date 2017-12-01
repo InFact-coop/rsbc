@@ -8,9 +8,9 @@ import Types exposing (..)
 resourcePage : Model -> Html Msg
 resourcePage model =
     div [ class "pa3 w-75-ns center" ]
-        [ h1 [ class "tc f3 pb3 bb b--rsbc-red" ] [ text "Physical Education and Sport for Visually Impaired\nChildren and Young People Unit 3" ]
+        [ p [ class "tc f3 pb3 bb b--rsbc-red" ] [ text "PE and Sport for Visually Impaired\nChildren and Young People Unit 3" ]
         , div [ class "dib w-75" ]
-            [ embed [ class "w-100 vh-100", src "examples.pdf" ] []
+            [ embed [ class "w-100 vh-100", src "assets/examples.pdf" ] []
             ]
         , div [ class "dib w-25 v-top" ]
             [ div [ class "center pa2 pointer ma1 button grow v-top w3" ]

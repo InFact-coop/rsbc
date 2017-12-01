@@ -23,8 +23,8 @@ imgButton buttonClass heading body linkStr imgSrc =
         [ class buttonClass
         , href ("/#" ++ linkStr)
         ]
-        [ div [ class ("justify-center no-repeat flex items-end ma3 bg-center contain"), style [ ( "background-image", "url(" ++ imgSrc ++ ")" ), ( "height", "10rem" ) ] ] []
+        [ div [ class "justify-center no-repeat flex items-end ma3 bg-center contain", style [ ( "background-image", "url(" ++ imgSrc ++ ")" ), ( "height", "10rem" ) ] ] []
         , div []
-            [ h1 [ class "tc f4" ] [ text heading ]
+            [ h1 [ class "tc f4 bb pb3 b--rsbc-red dib center" ] [ text heading ]
             ]
         ]

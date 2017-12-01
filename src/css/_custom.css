@@ -77,6 +77,5 @@ button {
 }
 
 .background-image {
-  background-image: url(/assets/uk.png);
-  background-size: cover;
+  background-color: #f6f6f6;
 }

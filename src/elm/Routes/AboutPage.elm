@@ -20,12 +20,12 @@ aboutPage model =
     div [ class "pt5" ]
         [ div [ class "w-75 center" ]
             --[ div [ class "w-100 h-100 bg-pink ma5 dib" ]
-            [ div [ class "center pl4 mw8" ]
-                [ button [ class tabStyle, classList [ ( "bb-0", onView AboutRsbc model ) ], onClick <| UpdateAbout AboutRsbc ] [ text "About RSBC" ]
-                , button [ class tabStyle, classList [ ( "bb-0", onView AboutYou model ) ], onClick <| UpdateAbout AboutYou ]
+            [ div [ class "center pl0 mw8 " ]
+                [ button [ class tabStyle, classList [ ( "bg-light-gray", not <| onView AboutRsbc model ) ], onClick <| UpdateAbout AboutRsbc ] [ text "About RSBC" ]
+                , button [ class tabStyle, classList [ ( "bg-light-gray", not <| onView AboutYou model ) ], onClick <| UpdateAbout AboutYou ]
                     [ text "About You" ]
                 ]
-            , Html.section [ class "ba b--black w-100 mw8 h-ta pa4 pt2 bg-white center hide-bottom" ]
+            , Html.section [ class "shadow-3 w-100 mw8 h-ta pa4 pt2 bg-white center hide-bottom" ]
                 [ liveContent
                 ]
             ]
@@ -35,7 +35,7 @@ aboutPage model =
 
 
 tabStyle =
-    "f4 pointer link dim  br--top ph3 pv2 pb0 mb0 dib b--black bg-white"
+    "f4 pointer link dim bt-0 br-0 bl-0 br0 bb-0 ph3 pv2 pb0 mb0 dib"
 
 
 onView : AboutPage -> Model -> Bool
@@ -80,7 +80,7 @@ labelClass =
 
 
 inputBaseClass =
-    "pa1 mb2 input-reset ba bt-0 br-0 bl-0 f4 bg-white b--rsbc-red"
+    "pa1 mb2 input-reset ba bt-0 br-0 bl-0 f4 bg-white b--black"
 
 
 formContent : Html Msg
@@ -99,5 +99,5 @@ formContent =
             ++ List.map
                 formItem
                 [ "First Name", "Last Name", "Email Address" ]
-            ++ [ div [ class "pa3 tl" ] [ div [ class "f5 pointer link bg-animate hover-bg-light-gray br2 ph3 pv2 ma3 ml5 dib ba b--rsbc-red" ] [ text "Submit" ] ] ]
+            ++ [ div [ class "pa3 tl" ] [ div [ class "f5 pointer link bg-animate hover-bg-light-gray br2 ph3 pv2 ma3 ml5 dib ba b--black" ] [ text "Submit" ] ] ]
         )

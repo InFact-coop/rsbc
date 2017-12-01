@@ -8,7 +8,7 @@ import Types exposing (..)
 mapPage : Model -> Html Msg
 mapPage model =
     div [ class "mt5 w-80-ns center" ]
-        [ div [ class "bg-white pa3 ba mt2" ]
+        [ div [ class "bg-white pa3 shadow-3 mt2" ]
             [ div [ class "tc f4 b mb3" ] [ text "See local events that might be of interest to you or your VI students" ]
             , div [ id "map", class "dib w-60-ns" ]
                 []

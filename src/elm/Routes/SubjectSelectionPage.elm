@@ -11,19 +11,19 @@ subjectSelectionPage model =
     div [ class "tc pt4 w-75 center" ]
         [ div
             [ class "pt4 inline-flex flex-wrap justify-between" ]
-            [ imgButton "ba b--black grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2"
+            [ imgButton "shadow-3 grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2"
                 "Maths"
                 ""
                 "subject"
                 "./assets/calculator.png"
-            , imgButton "ba b--black grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2"
+            , imgButton "shadow-3 grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2"
                 "Science"
                 ""
                 "subject"
                 "./assets/scienceIcon.png"
-            , imgButton "ba b--black grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2" "Arts" "" "subject" "./assets/paintIcon.png"
-            , imgButton "  ba b--black grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2" "Reading" "" "subject" "./assets/readingIcon.png"
-            , imgButton " ba b--black grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2" "Sport" "" "subject" "./assets/sportsIcon.png"
-            , imgButton "  ba b--black grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2" "Homework" "" "subject" "./assets/homeworkIcon.png"
+            , imgButton "shadow-3 grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2" "Arts" "" "subject" "./assets/paintIcon.png"
+            , imgButton "  shadow-3 grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2" "Reading" "" "subject" "./assets/readingIcon.png"
+            , imgButton " shadow-3 grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2" "Sport" "" "subject" "./assets/sportsIcon.png"
+            , imgButton "  shadow-3 grow black wide-spacing pa2 ma1 w-30 vh-33 bg-white no-underline tc ma2" "Homework" "" "subject" "./assets/homeworkIcon.png"
             ]
         ]

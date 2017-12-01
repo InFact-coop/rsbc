@@ -8,7 +8,7 @@ import Types exposing (..)
 subjectPage : Model -> Html Msg
 subjectPage model =
     div [ class "w-60-ns center" ]
-        [ h1 [ class "tc f3 pb3 bb b--rsbc-red" ] [ text "Resources" ]
+        [ p [ class "tc f3 pb3 bb b--rsbc-red" ] [ text "Resources" ]
         , ul []
             (List.map
                 eachResource
@@ -22,7 +22,7 @@ subjectPage model =
 
 eachResource : Resource -> Html Msg
 eachResource resource =
-    a [ class "no-underline dt w-100 ba dim b--black rsbc-red pa2 ma2 bw1", href "/#resource" ]
+    a [ class "no-underline dt w-100 ba dim b--black rsbc-red pa2 ma2 bw1 bg-white", href "/#resource" ]
         [ div [ class "dtc w5 b v-mid tc" ]
             [ text resource.name ]
         , div [ class "dtc w5 b v-mid tc" ]
