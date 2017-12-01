@@ -8,13 +8,13 @@ import Types exposing (..)
 subjectPage : Model -> Html Msg
 subjectPage model =
     div [ class "w-60-ns center" ]
-        [ h1 [ class "tc f1" ] [ text "Resources" ]
+        [ h1 [ class "tc f3 pb3 bb b--rsbc-red" ] [ text "Resources" ]
         , ul []
             (List.map
                 eachResource
-                [ { name = "KS1 PE lesson", rtype = "PDF Doc", subject = "PE", votes = "8" }
-                , { name = "KS1 PE lesson", rtype = "PDF Doc", subject = "PE", votes = "8" }
-                , { name = "KS1 PE lesson", rtype = "PDF Doc", subject = "PE", votes = "8" }
+                [ { name = "Guide for PE Unit 3", rtype = "PDF Doc", subject = "PE", votes = "10" }
+                , { name = "Video for PE in General", rtype = "Video", subject = "PE", votes = "8" }
+                , { name = "Guide for PE Unit 2", rtype = "PDF Doc", subject = "PE", votes = "5" }
                 ]
             )
         ]
