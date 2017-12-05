@@ -1,8 +1,6 @@
 # RSBC
 See our site __[here!!](http://rsbcApp.surge.sh/)__ :eyes: 
 
-From our design workshop, we were able to identify the following points: 
-
 ![img_20171123_112032386](https://user-images.githubusercontent.com/23295662/33604658-a662072e-d9ae-11e7-8927-76ff55502602.jpg)
 
 ![img_20171123_154120853](https://user-images.githubusercontent.com/23295662/33604659-a909695e-d9ae-11e7-9f79-2396055babcc.jpg)
