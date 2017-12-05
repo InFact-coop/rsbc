@@ -48,8 +48,10 @@ We began by aligning on the main user stories that were key to the success of th
 
 
 
-__Prototype__  
+__Design__  
   
+We started by building designs in Figma to help map the user journey more thoroughly. 
+
 ![Home](https://user-images.githubusercontent.com/23310908/33604773-14fc3ccc-d9af-11e7-8f78-ac42e7263a8a.png)
 ![subject](https://user-images.githubusercontent.com/23310908/33604951-b27571bc-d9af-11e7-865c-b631bf44b21e.png)
 ![env](https://user-images.githubusercontent.com/23310908/33604782-158cad98-d9af-11e7-9fb3-30ec05b73003.png)
@@ -59,10 +61,7 @@ __Prototype__
 ![about us](https://user-images.githubusercontent.com/23310908/33604777-155fd3c2-d9af-11e7-8f68-87d5d9d52f00.png)
 ![about you](https://user-images.githubusercontent.com/23310908/33604780-15762f00-d9af-11e7-904b-8d54d88cfa66.png)
 
-  
-We started by building prototypes in Figma to help map the user journey more thoroughly. 
-
-With Samantha's help and feedback, we redesigned the first prototype to adapt it to SENDCO's needs and branding.
+With Samantha's help and feedback, we refined the designs to adapt it to SENDCO's needs and branding.
 
 As a result, we can present you with this prototype, which is not a functional app but a proof of concept. 
 
